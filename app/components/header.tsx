@@ -7,7 +7,11 @@ export default function Header() {
   const [isOpen, setOpen] = useState(false);
   const links: string[] = ["about", "projects", "articles", "contact"];
 
-  const smoothScrollTo = (id: string) => {
+  const smoothScrollTo = (
+    id: string,
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ): void => {
+    event.preventDefault();
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -32,7 +36,7 @@ export default function Header() {
             <li key={link}>
               <Link
                 href={`#${link}`}
-                onClick={() => smoothScrollTo(link)}
+                onClick={(event) => smoothScrollTo(link, event)}
                 className="hidden sm:block font-semibold uppercase hover:text-violet-blue hover:scale-105"
               >
                 {link}
@@ -56,7 +60,7 @@ export default function Header() {
               <li key={link} onClick={() => setOpen(!isOpen)}>
                 <Link
                   href={`#${link}`}
-                  onClick={() => smoothScrollTo(link)}
+                  onClick={(event) => smoothScrollTo(link, event)}
                   className="font-semibold uppercase hover:text-violet-blue"
                 >
                   {link}
