@@ -18,6 +18,7 @@ export default function About() {
     "Git",
     "GitHub",
     "CLI",
+    "Vite",
     "Figma",
   ];
 
