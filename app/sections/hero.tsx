@@ -1,5 +1,5 @@
-import Sidebar from "../components/sidebar";
 import Link from "next/link";
+import Sidebar from "../components/sidebar";
 
 export default function Hero() {
   return (
@@ -21,7 +21,7 @@ export default function Hero() {
           <Link
             href={`https://bit.ly/iambelloopeyemiCV`}
             target="_blank"
-            className="px-12 py-3 border border-violet-blue rounded font-bold text-violet-blue hover:scale-105"
+            className="px-12 py-3 bg-violet-blue rounded font-bold text-white hover:scale-105"
             download
           >
             DOWNLOAD CV

@@ -48,7 +48,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-anti-flash-white px-4 py-12 sm:py-14">
+    <section id="contact" className="bg-anti-flash-white px-6 py-12 sm:py-14">
       <header className="flex flex-col items-center gap-3 sm:gap-5 mb-10 sm:mb-14">
         <h1 className="text-2xl sm:text-4xl font-bold uppercase">contact</h1>
         <Underline />
@@ -67,7 +67,7 @@ export default function Contact() {
         onSubmit={handleSubmit}
       >
         <div className="flex justify-center">
-          <Form className="w-2/3 bg-white p-4 sm:p-8 rounded drop-shadow mb-16">
+          <Form className="w-full sm:w-3/4 bg-white p-4 sm:p-8 rounded drop-shadow mb-16">
             <div className="block mb-5">
               <label className="block text-sm lg:text-base font-medium mb-2">
                 Name

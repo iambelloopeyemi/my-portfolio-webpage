@@ -1,6 +1,6 @@
-import Underline from "../components/underline";
-import projects from "../data/projects.json";
 import Project from "../components/project";
+import Underline from "../components/underline";
+import projects from "../data/projectDetails.json";
 
 export default function Projects() {
   return (

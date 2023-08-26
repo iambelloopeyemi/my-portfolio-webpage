@@ -15,8 +15,7 @@ export default function Bio() {
       <p>
         I also enjoy writing articles and sharing content related to what
         I&apos;ve learned, aiming to assist others within the Dev Community.
-        aiming to assist others within the Dev Community. Feel free to explore
-        some of my work in the&nbsp;
+        Feel free to explore some of my work in the&nbsp;
         <Link href={`#articles`} className="text-violet-blue">
           <strong>Articles</strong>
         </Link>

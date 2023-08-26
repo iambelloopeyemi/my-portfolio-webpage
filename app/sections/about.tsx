@@ -1,6 +1,6 @@
-import Underline from "../components/underline";
 import Bio from "../components/bio";
 import SkillTag from "../components/skillTag";
+import Underline from "../components/underline";
 
 export default function About() {
   const skills: string[] = [
