@@ -1,23 +1,18 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { smoothScrollTo } from "../utils/scroll";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
   const links: string[] = ["about", "projects", "articles", "contact"];
 
-  const smoothScrollTo = (
+  const handleSmoothScroll = (
     id: string,
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ): void => {
-    event.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
+  ) => {
+    smoothScrollTo(id, event);
   };
 
   return (
@@ -36,7 +31,7 @@ export default function Header() {
             <li key={link}>
               <Link
                 href={`#${link}`}
-                onClick={(event) => smoothScrollTo(link, event)}
+                onClick={(event) => handleSmoothScroll(link, event)}
                 className="hidden sm:block font-semibold uppercase hover:text-violet-blue hover:scale-105"
               >
                 {link}
@@ -60,7 +55,7 @@ export default function Header() {
               <li key={link} onClick={() => setOpen(!isOpen)}>
                 <Link
                   href={`#${link}`}
-                  onClick={(event) => smoothScrollTo(link, event)}
+                  onClick={(event) => handleSmoothScroll(link, event)}
                   className="font-semibold uppercase hover:text-violet-blue"
                 >
                   {link}
