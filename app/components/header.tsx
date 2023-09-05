@@ -6,7 +6,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
-  const links: string[] = ["about", "projects", "articles", "contact"];
+  const links: string[] = ["about", "projects", "articles"];
 
   const handleSmoothScroll = (
     id: string,
@@ -28,11 +28,14 @@ export default function Header() {
         </div>
         <ul className="flex justify-center items-center sm:gap-6 lg:gap-12">
           {links.map((link) => (
-            <li key={link}>
+            <li
+              key={link}
+              className="sm:last:bg-violet-blue sm:last:text-white sm:last:px-3 sm:last:py-2 sm:last:rounded hover:scale-105"
+            >
               <Link
                 href={`#${link}`}
                 onClick={(event) => handleSmoothScroll(link, event)}
-                className="hidden sm:block font-semibold uppercase hover:text-violet-blue hover:scale-105"
+                className="hidden sm:block font-semibold uppercase"
               >
                 {link}
               </Link>
