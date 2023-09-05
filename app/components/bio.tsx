@@ -5,7 +5,7 @@ export default function Bio() {
         I&apos;m a Frontend Web Developer committed to crafting functional and
         interactive web applications that offer a world-class user experience.
         Check out some of my work in the&nbsp;
-        <strong className="text-violet-blue underline">Projects</strong>
+        <strong className="text-violet-blue">Projects</strong>
         &nbsp;section.
       </p>
       <p>
