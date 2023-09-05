@@ -1,40 +1,35 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { smoothScrollTo } from "../utils/scroll";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
   const links: string[] = ["about", "projects", "articles"];
 
-  const handleSmoothScroll = (
-    id: string,
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    smoothScrollTo(id, event);
-  };
-
   return (
     <header className="bg-seasalt px-4 sm:px-8 lg:px-16 py-3 z-50 shadow-lg">
       <nav className="h-12 flex justify-between items-center">
         <div className="flex justify-center items-center">
           <Link
-            href={`#home`}
+            href={`/`}
             className="text-lg font-bold text-violet-blue uppercase hover:scale-105"
           >
             iambelloopeyemi
           </Link>
         </div>
         <ul className="flex justify-center items-center sm:gap-6 lg:gap-12">
-          {links.map((link) => (
+          {links.map((link, index) => (
             <li
               key={link}
-              className="sm:last:bg-violet-blue sm:last:text-white sm:last:px-3 sm:last:py-2 sm:last:rounded hover:scale-105"
+              className={`${
+                index === links.length - 1
+                  ? "sm:bg-violet-blue sm:text-white sm:px-3 sm:py-2 sm:rounded sm:hover:scale-105"
+                  : "hover:text-violet-blue hover:scale-105"
+              }`}
             >
               <Link
-                href={`#${link}`}
-                onClick={(event) => handleSmoothScroll(link, event)}
+                href={`/${link}`}
                 className="hidden sm:block font-semibold uppercase"
               >
                 {link}
@@ -58,7 +53,6 @@ export default function Header() {
               <li key={link} onClick={() => setOpen(!isOpen)}>
                 <Link
                   href={`#${link}`}
-                  onClick={(event) => handleSmoothScroll(link, event)}
                   className="font-semibold uppercase hover:text-violet-blue"
                 >
                   {link}
