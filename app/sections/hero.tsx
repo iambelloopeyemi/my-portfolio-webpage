@@ -1,28 +1,53 @@
+"use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Sidebar from "../components/sidebar";
 
-export default function Hero() {
+export default function Hero(): JSX.Element {
+  const [h1Text, setH1Text] = useState<string>("");
+  const [showH2Text, setShowH2Text] = useState<boolean>(false);
+  const [charIndex, setCharIndex] = useState<number>(0);
+
+  const originalH1Text: string = "Hey, I'm Opeyemi Bello";
+
+  useEffect(() => {
+    const h1IntervalId: NodeJS.Timeout = setInterval(() => {
+      if (charIndex < originalH1Text.length) {
+        setH1Text((prevText) => prevText + originalH1Text.charAt(charIndex));
+        setCharIndex((prevIndex) => prevIndex + 1);
+      } else {
+        clearInterval(h1IntervalId);
+      }
+    }, 100);
+
+    const h2TimeoutId: NodeJS.Timeout = setTimeout(() => {
+      setShowH2Text(true);
+    }, 1000);
+
+    return () => {
+      clearInterval(h1IntervalId);
+      clearTimeout(h2TimeoutId);
+    };
+  }, [charIndex]);
+
   return (
-    <section
-      id="home"
-      className="bg-hero-pattern h-screen px-2 flex flex-col items-center justify-center"
-    >
+    <section className="bg-hero-pattern h-screen px-2 flex flex-col items-center justify-center">
       <Sidebar />
       <article className="text-center grid gap-20">
-        <h1 className="text-3xl sm:text-5xl font-extrabold">
-          Hey, I&apos;m Opeyemi Bello
-        </h1>
-        <h2 className="text-2xl sm:text-3xl font-semibold sm:font-bold">
-          Frontend Web Developer
-        </h2>
+        <h1 className="text-3xl sm:text-5xl font-extrabold">{h1Text}</h1>
+        {showH2Text && (
+          <h2 className="text-2xl sm:text-3xl font-semibold sm:font-bold">
+            A Frontend Web Developer
+          </h2>
+        )}
         <div className="flex justify-center">
           <Link
             href={`https://bit.ly/iambelloopeyemiResume`}
             target="_blank"
-            className="px-12 py-3 bg-violet-blue rounded font-bold text-white hover:scale-105"
+            className="px-12 py-3 bg-violet-blue rounded uppercase font-bold text-white hover:scale-105"
             download
           >
-            DOWNLOAD CV
+            download my cv
           </Link>
         </div>
       </article>
