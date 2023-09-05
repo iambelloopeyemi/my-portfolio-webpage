@@ -30,12 +30,12 @@ export default function Header() {
           {links.map((link) => (
             <li
               key={link}
-              className="sm:last:bg-violet-blue sm:last:text-white sm:last:px-3 sm:last:py-2 sm:last:rounded sm:last:hover:scale-105"
+              className="sm:last:bg-violet-blue sm:last:text-white sm:last:px-3 sm:last:py-2 sm:last:rounded hover:scale-105"
             >
               <Link
                 href={`#${link}`}
                 onClick={(event) => handleSmoothScroll(link, event)}
-                className="hidden sm:block font-semibold uppercase hover:text-violet-blue sm:last:hover:text-white hover:scale-105 sm:last:hover:scale-100"
+                className="hidden sm:block font-semibold uppercase"
               >
                 {link}
               </Link>
