@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SocialMedia as links } from "../data/socialMedia";
+import { SocialMedia as links } from "../data/socials";
 import Contact from "./contact";
 import Email from "./email";
 import Phone from "./phone";

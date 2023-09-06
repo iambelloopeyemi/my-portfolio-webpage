@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SocialMedia as links } from "../data/socialMedia";
+import { SocialMedia as links } from "../data/socials";
 
 export default function Sidebar(): JSX.Element {
   return (
