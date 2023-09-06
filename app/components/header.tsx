@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function Header() {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
   const links: string[] = ["home", "about", "projects", "articles"];
 
   return (
