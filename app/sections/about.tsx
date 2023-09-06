@@ -1,27 +1,9 @@
 import Bio from "../components/bio";
 import SkillTag from "../components/skillTag";
 import Underline from "../components/underline";
+import { skills } from "../data/skills";
 
 export default function About() {
-  const skills: string[] = [
-    "HTML",
-    "CSS",
-    "SASS",
-    "Tailwindcss",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Redux",
-    "Nextjs",
-    "Rest API",
-    "GraphQL",
-    "Git",
-    "GitHub",
-    "CLI",
-    "Vite",
-    "Figma",
-  ];
-
   return (
     <section
       id="about"
@@ -34,12 +16,6 @@ export default function About() {
       <div className="grid sm:grid-cols-2 gap-14 sm:gap-10 mb-16">
         <div>
           <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
-            Get to know me!
-          </h3>
-          <Bio />
-        </div>
-        <div>
-          <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
             My Skills
           </h3>
           <ul className="flex justify-center sm:justify-start flex-wrap gap-4">
@@ -49,6 +25,12 @@ export default function About() {
               </li>
             ))}
           </ul>
+        </div>
+        <div>
+          <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
+            Get to know me!
+          </h3>
+          <Bio />
         </div>
       </div>
     </section>
