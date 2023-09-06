@@ -72,7 +72,7 @@ export default function Contact() {
             <ErrorMessage
               name="name"
               component="div"
-              className="text-sm text-red-500"
+              className="text-xs sm:text-sm text-red-500"
             />
           </div>
           <div className="mb-4">
@@ -89,7 +89,7 @@ export default function Contact() {
             <ErrorMessage
               name="email"
               component="div"
-              className="text-sm text-red-500"
+              className="text-xs sm:text-sm text-red-500"
             />
           </div>
           <div className="mb-4">
@@ -106,13 +106,13 @@ export default function Contact() {
             <ErrorMessage
               name="message"
               component="div"
-              className="text-sm text-red-500"
+              className="text-xs sm:text-sm text-red-500"
             />
           </div>
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-violet-blue px-3 sm:px-4 py-2 rounded hover:scale-105 text-white uppercase font-medium"
+              className="bg-violet-blue px-3 sm:px-4 py-1 sm:py-2 rounded hover:scale-105 text-white uppercase font-medium"
             >
               Submit
             </button>

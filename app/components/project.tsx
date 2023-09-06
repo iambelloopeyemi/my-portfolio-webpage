@@ -35,7 +35,7 @@ export default function Project({
         />
       </div>
       <div className="w-fit h-fit">
-        <h3 className="text-xl font-bold mb-3 sm:mb-5">{title}</h3>
+        <h4 className="text-xl font-bold mb-3 sm:mb-5">{title}</h4>
         <article className="text-dim-gray text-justify leading-6 grid gap-2 mb-8 sm:mb-10">
           {article}
         </article>

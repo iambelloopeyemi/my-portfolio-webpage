@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} text-night flex flex-col`}>
         <Header />
-        <main className="grow">{children}</main>
+        <main className="grow min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

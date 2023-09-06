@@ -23,7 +23,7 @@ export function InternalLinkButton({
           color: color,
           border: border,
         }}
-        className="px-12 py-3 rounded font-bold hover:scale-105"
+        className="px-10 sm:px-12 py-2 sm:py-3 rounded font-bold hover:scale-105"
       >
         {title}
       </button>
@@ -46,7 +46,7 @@ export function ExternalLinkButton({
           color: color,
           border: border,
         }}
-        className="px-12 py-3 rounded font-bold hover:scale-105"
+        className="px-10 sm:px-12 py-2 sm:py-3 rounded font-bold hover:scale-105"
       >
         {title}
       </button>

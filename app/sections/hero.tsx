@@ -44,7 +44,7 @@ export default function Hero(): JSX.Element {
           <Link
             href={`https://bit.ly/iambelloopeyemiResume`}
             target="_blank"
-            className="px-12 py-3 bg-violet-blue rounded uppercase font-bold text-white hover:scale-105"
+            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-bold text-white hover:scale-105"
             download
           >
             download my cv
