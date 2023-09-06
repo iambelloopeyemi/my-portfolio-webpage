@@ -5,7 +5,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
-  const links: string[] = ["about", "projects", "articles"];
+  const links: string[] = ["home", "about", "projects", "articles"];
 
   return (
     <header className="bg-seasalt px-4 sm:px-8 lg:px-16 py-3 z-50 shadow-lg">
@@ -29,10 +29,10 @@ export default function Header() {
               }`}
             >
               <Link
-                href={`/${link}`}
+                href={`/${index === 0 ? (link = "/") : link}`}
                 className="hidden sm:block font-semibold uppercase"
               >
-                {link}
+                {index === 0 ? (link = "home") : link}
               </Link>
             </li>
           ))}
@@ -52,7 +52,7 @@ export default function Header() {
             {links.map((link) => (
               <li key={link} onClick={() => setOpen(!isOpen)}>
                 <Link
-                  href={`#${link}`}
+                  href={`/${link}`}
                   className="font-semibold uppercase hover:text-violet-blue"
                 >
                   {link}

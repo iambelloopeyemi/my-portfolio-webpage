@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "web development, web design, frontend engineer, frontend web developer, html, css, sass, tailwind css, javascript, typescript, react, redux, nextjs, git, github, rest api, graphql, technical writing",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Hero />
