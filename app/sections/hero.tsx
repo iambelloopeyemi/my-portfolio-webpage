@@ -5,8 +5,8 @@ import Sidebar from "../components/sidebar";
 
 export default function Hero(): JSX.Element {
   const [h1Text, setH1Text] = useState<string>("");
-  const [showH2Text, setShowH2Text] = useState<boolean>(false);
   const [charIndex, setCharIndex] = useState<number>(0);
+  const [showH2Text, setShowH2Text] = useState<boolean>(false);
 
   const originalH1Text: string = "Hey, I'm Opeyemi Bello";
 

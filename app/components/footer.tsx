@@ -10,7 +10,7 @@ export default function Footer(): JSX.Element {
   const currentYear: number = new Date().getFullYear();
 
   return (
-    <footer className="bg-night text-white px-3 pt-10 pb-3">
+    <footer id="contacts" className="bg-night text-white px-3 pt-10 pb-3">
       <div className="flex flex-col items-center gap-3 mb-6">
         <h6 className="uppercase text-xl sm:text-2xl font-medium">
           contact me

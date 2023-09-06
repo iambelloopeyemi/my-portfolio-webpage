@@ -1,3 +1,4 @@
+import ArrowDown from "../components/arrowDown";
 import Bio from "../components/bio";
 import SkillTag from "../components/skillTag";
 import Underline from "../components/underline";
@@ -5,32 +6,33 @@ import { skills } from "../data/skills";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="bg-seasalt h-fit px-5 sm:px-10 md:px-16 lg:px-20 py-12 sm:py-14"
-    >
-      <header className="flex flex-col items-center gap-3 mb-10 sm:mb-14">
-        <h2 className="text-2xl sm:text-4xl font-bold uppercase">about me</h2>
+    <section className="bg-anti-flash-white h-fit py-12 sm:py-14">
+      <header className="flex flex-col items-center gap-3 sm:gap-5 mb-10 sm:mb-14">
+        <h2 className="text-2xl sm:text-4xl font-bold uppercase">about</h2>
         <Underline />
+        <h3 className="text-lg sm:text-xl font-medium sm:font-semibold text-center">
+          Get to know me!
+        </h3>
+        <ArrowDown />
       </header>
-      <div className="grid sm:grid-cols-2 gap-14 sm:gap-10 mb-16">
-        <div>
+      <div className="bg-seasalt px-5 py-10 flex flex-col items-center gap-14 sm:gap-10 mb-16">
+        <div className="flex flex-col items-center sm:w-2/3">
+          <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
+            About Me
+          </h3>
+          <Bio />
+        </div>
+        <div className="flex flex-col items-center">
           <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
             My Skills
           </h3>
-          <ul className="flex justify-center sm:justify-start flex-wrap gap-4">
+          <ul className="flex justify-center items-center flex-wrap gap-4 sm:w-2/3">
             {skills.map((skill) => (
               <li key={skill}>
                 <SkillTag title={skill} />
               </li>
             ))}
           </ul>
-        </div>
-        <div>
-          <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
-            Get to know me!
-          </h3>
-          <Bio />
         </div>
       </div>
     </section>

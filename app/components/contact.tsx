@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex justify-center px-6 mb-6">
+    <div className="flex justify-center px-6 mb-12">
       <Formik
         initialValues={{
           name: "",

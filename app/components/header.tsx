@@ -49,13 +49,13 @@ export default function Header() {
         </button>
         {isOpen && (
           <ul className="sm:hidden bg-seasalt w-screen h-fit py-7 shadow-lg ease-in-out absolute top-16 right-0 flex flex-col justify-center items-center gap-5">
-            {links.map((link) => (
+            {links.map((link, index) => (
               <li key={link} onClick={() => setOpen(!isOpen)}>
                 <Link
-                  href={`/${link}`}
+                  href={`/${index === 0 ? (link = "/") : link}`}
                   className="font-semibold uppercase hover:text-violet-blue"
                 >
-                  {link}
+                  {index === 0 ? (link = "home") : link}
                 </Link>
               </li>
             ))}
