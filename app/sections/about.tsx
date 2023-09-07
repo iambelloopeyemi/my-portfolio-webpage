@@ -1,5 +1,6 @@
 import ArrowDown from "../components/arrowDown";
 import Bio from "../components/bio";
+// import BioCopy from "../components/bioCopy";
 import SkillTag from "../components/skillTag";
 import Underline from "../components/underline";
 import { skills } from "../data/skills";
@@ -15,7 +16,7 @@ export default function About() {
         </h3>
         <ArrowDown />
       </header>
-      <div className="bg-seasalt px-5 py-10 flex flex-col items-center gap-14 sm:gap-10 mb-16">
+      <div className="bg-seasalt px-5 py-10 flex flex-col items-center gap-14 sm:gap-10 mb-20">
         <div className="flex flex-col items-center sm:w-2/3">
           <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
             About Me

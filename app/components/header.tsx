@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex justify-center items-center">
           <Link
             href={`/`}
-            className="text-lg font-bold text-violet-blue uppercase hover:scale-105"
+            className="text-lg font-semibold sm:font-bold text-violet-blue uppercase hover:scale-105"
           >
             iambelloopeyemi
           </Link>
