@@ -12,6 +12,7 @@ const EMAILJS_PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY;
 interface ContactFormValues {
   name: string;
   email: string;
+  phone: string;
   message: string;
 }
 
@@ -24,6 +25,7 @@ export default function Contact() {
       const templateParams = {
         from_name: values.name,
         from_email: values.email,
+        from_phone: values.phone,
         message: values.message,
       };
       if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
@@ -37,7 +39,14 @@ export default function Contact() {
       toast.success("Email sent successfully!", {
         position: toast.POSITION.TOP_RIGHT,
       });
-      formikHelpers.resetForm();
+      formikHelpers.resetForm({
+        values: {
+          name: "",
+          email: "",
+          phone: "", // Reset the phone field
+          message: "",
+        },
+      });
     } catch (error) {
       console.error("Failed to send email.", error);
       toast.error("Failed to send email.", {
@@ -52,6 +61,7 @@ export default function Contact() {
         initialValues={{
           name: "",
           email: "",
+          phone: "",
           message: "",
         }}
         validationSchema={validationSchema}
@@ -88,6 +98,25 @@ export default function Contact() {
             </div>
             <ErrorMessage
               name="email"
+              component="div"
+              className="text-xs sm:text-sm text-red-500"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-1">
+              Phone Number
+            </label>
+            <div className="bg-seasalt p-2 rounded">
+              <Field
+                name="phone"
+                type="text"
+                autoComplete="off"
+                placeholder="Enter Your Phone Number"
+                className="block bg-seasalt w-full h-6 rounded outline-0 text-sm text-dim-gray"
+              />
+            </div>
+            <ErrorMessage
+              name="phone"
               component="div"
               className="text-xs sm:text-sm text-red-500"
             />
