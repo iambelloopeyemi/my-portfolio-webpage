@@ -43,7 +43,7 @@ export default function Contact() {
         values: {
           name: "",
           email: "",
-          phone: "", // Reset the phone field
+          phone: "",
           message: "",
         },
       });
