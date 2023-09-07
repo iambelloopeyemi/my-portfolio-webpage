@@ -63,7 +63,7 @@ export default function Bio(): JSX.Element {
   }, [charIndex]);
 
   return (
-    <article className="text-dim-gray text-justify leading-6 grid gap-4">
+    <article className="text-night text-justify leading-6 grid gap-4">
       {text.map((paragraph, index: number) => (
         <p key={index}>{paragraph}</p>
       ))}
