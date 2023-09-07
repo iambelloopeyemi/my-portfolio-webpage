@@ -43,7 +43,7 @@ export default function Hero(): JSX.Element {
         <div className="flex justify-center">
           <Link
             href={`/about`}
-            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-bold text-white animate-bounce"
+            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-medium sm:font-bold text-white animate-bounce"
           >
             more about me
           </Link>

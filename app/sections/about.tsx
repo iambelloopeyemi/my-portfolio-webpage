@@ -1,6 +1,6 @@
 import ArrowDown from "../components/arrowDown";
-import Bio from "../components/bio";
-// import BioCopy from "../components/bioCopy";
+// import Bio from "../components/bio";
+import BioCopy from "../components/bioCopy";
 import SkillTag from "../components/skillTag";
 import Underline from "../components/underline";
 import { skills } from "../data/skills";
@@ -21,7 +21,7 @@ export default function About() {
           <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">
             About Me
           </h3>
-          <Bio />
+          <BioCopy />
         </div>
         <div className="flex flex-col items-center">
           <h3 className="text-2xl text-center font-bold mb-6 sm:mb-8">

@@ -7,21 +7,35 @@ export default function BioCopy(): JSX.Element {
   const [showButton, setShowButton] = useState<boolean>(false);
 
   // Define the paragraphs as JSX elements
-  const paragraphs = [
-    <p key={0}>
+  const paragraphs: JSX.Element[] = [
+    <p key={0} className="delay-700">
       I&apos;m a Frontend Web Developer committed to crafting functional and
       interactive web applications that offer a world-class user experience.
-      Check out some of my work in the Projects page.
+      Check out some of my work in the&nbsp;
+      <Link href={`/projects`} className="text-violet-blue hover:underline">
+        <strong>Projects</strong>
+      </Link>
+      &nbsp;page.
     </p>,
-    <p key={1}>
+    <p key={1} className="delay-700">
       I also enjoy writing articles and sharing content related to what
       I&apos;ve learned, aiming to assist others within the Dev Community. Feel
-      free to explore some of my work in the Articles page.
+      free to explore some of my work in the&nbsp;
+      <Link href={`/articles`} className="text-violet-blue hover:underline">
+        <strong>Articles</strong>
+      </Link>
+      &nbsp;page.
     </p>,
-    <p key={2}>
+    <p key={2} className="delay-700">
       If you&apos;re interested in exploring potential opportunities or
-      discussing collaboration, please don&apos;t hesitate to Contact me.
-      I&apos;m looking forward to connecting with you!
+      discussing collaboration, please don&apos;t hesitate to&nbsp;
+      <Link
+        href={`/about#contacts`}
+        className="text-violet-blue hover:underline"
+      >
+        <strong>Contact</strong>
+      </Link>
+      &nbsp;me. I&apos;m looking forward to connecting with you!
     </p>,
   ];
 
@@ -29,16 +43,15 @@ export default function BioCopy(): JSX.Element {
     if (currentParagraph < paragraphs.length) {
       const timeoutId: NodeJS.Timeout = setTimeout(() => {
         setCurrentParagraph((prevIndex) => prevIndex + 1);
-      }, 2000); // Adjust the time to control how long each paragraph is displayed
+      }, 1500);
 
       return () => {
         clearTimeout(timeoutId);
       };
     } else {
-      // All paragraphs have been displayed, show the button
       setShowButton(true);
     }
-  }, [currentParagraph]);
+  }, [currentParagraph, paragraphs.length]);
 
   return (
     <>
@@ -50,7 +63,7 @@ export default function BioCopy(): JSX.Element {
           <Link
             href={`https://bit.ly/iambelloopeyemiResume`}
             target="_blank"
-            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-bold text-white animate-bounce"
+            className="px-8 sm:px-10 py-2 sm:py-3 bg-violet-blue rounded uppercase font-medium sm:font-bold text-white animate-bounce"
           >
             download my cv
           </Link>
