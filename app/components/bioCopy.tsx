@@ -29,10 +29,7 @@ export default function BioCopy(): JSX.Element {
     <p key={2} className="delay-700">
       If you&apos;re interested in exploring potential opportunities or
       discussing collaboration, please don&apos;t hesitate to&nbsp;
-      <Link
-        href={`/about#contacts`}
-        className="text-violet-blue hover:underline"
-      >
+      <Link href={`/#contacts`} className="text-violet-blue hover:underline">
         <strong>Contact</strong>
       </Link>
       &nbsp;me. I&apos;m looking forward to connecting with you!
