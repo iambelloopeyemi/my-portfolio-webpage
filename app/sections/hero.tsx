@@ -22,7 +22,7 @@ export default function Hero(): JSX.Element {
 
     const h2TimeoutId: NodeJS.Timeout = setTimeout(() => {
       setShowH2Text(true);
-    }, 1000);
+    }, 500);
 
     return () => {
       clearInterval(h1IntervalId);
@@ -42,12 +42,10 @@ export default function Hero(): JSX.Element {
         )}
         <div className="flex justify-center">
           <Link
-            href={`https://bit.ly/iambelloopeyemiResume`}
-            target="_blank"
-            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-bold text-white hover:scale-105"
-            download
+            href={`/about`}
+            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-medium sm:font-bold text-white animate-bounce"
           >
-            download my cv
+            more about me
           </Link>
         </div>
       </article>

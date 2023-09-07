@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Bio(): JSX.Element {
   const [text, setText] = useState<string[]>(["", "", ""]);
   const [charIndex, setCharIndex] = useState<number>(0);
+  const [showButton, setShowButton] = useState<boolean>(false);
 
   const originalTexts: string[] = [
     "I'm a Frontend Web Developer committed to crafting functional and interactive web applications that offer a world-class user experience. Check out some of my work in the Projects page.",
@@ -55,18 +57,36 @@ export default function Bio(): JSX.Element {
       } else {
         clearInterval(intervalId);
       }
-    }, 50);
+    }, 20);
+
+    const buttonTimeoutId: NodeJS.Timeout = setTimeout(() => {
+      setShowButton(true);
+    }, 500);
 
     return () => {
       clearInterval(intervalId);
+      clearTimeout(buttonTimeoutId);
     };
   }, [charIndex]);
 
   return (
-    <article className="text-night text-justify leading-6 grid gap-4">
-      {text.map((paragraph, index: number) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-    </article>
+    <>
+      <article className="text-night text-justify sm:text-lg leading-6 grid gap-4 mb-6 sm:mb-8">
+        {text.map((paragraph, index: number) => (
+          <p key={index}>{paragraph}</p>
+        ))}
+      </article>
+      {showButton && (
+        <div className="flex justify-center">
+          <Link
+            href={`https://bit.ly/iambelloopeyemiResume`}
+            target="_blank"
+            className="px-10 sm:px-12 py-2 sm:py-3 bg-violet-blue rounded uppercase font-bold text-white animate-bounce"
+          >
+            download my cv
+          </Link>
+        </div>
+      )}
+    </>
   );
 }
