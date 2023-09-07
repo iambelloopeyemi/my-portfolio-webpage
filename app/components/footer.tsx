@@ -25,10 +25,10 @@ export default function Footer(): JSX.Element {
               <Email />
             </li>
             <li>
-              <Phone />
+              <WhatsApp />
             </li>
             <li>
-              <WhatsApp />
+              <Phone />
             </li>
           </ul>
           <ul className="flex items-center justify-center gap-6">
