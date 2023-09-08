@@ -1,7 +1,7 @@
 [
   {
     "title": "Portfolio Website",
-    "article": "This is my portfolio website, meticulously crafted with Typescript and Tailwind CSS. Through this platform, you will have the opportunity to delve deeper into my world and learn more about me, my skills, and my projects.",
+    "article": "This is my portfolio website, meticulously crafted with Nextjs, Typescript, and Tailwind CSS. Through this platform, you will have the opportunity to delve deeper into my world and learn more about me, my skills, and my projects.",
     "thumbnail": "/portfolio-website.png",
     "alt": "portfolio website",
     "hostedUrl": "https://iambelloopeyemi.netlify.app",
