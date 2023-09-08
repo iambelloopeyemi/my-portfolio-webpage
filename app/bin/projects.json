@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Cash2go",
+    "article": "Cash2go is a loan prediction application that I had the privilege to collaborate on with a team of designers, data scientists, and frontend and backend engineers. We adopted agile methodologies throughout the project development process. Some of the technologies we utilized in this project include React, Redux, Formik, Yup, Axios, and CSS, among others.",
+    "thumbnail": "/cash2go.png",
+    "alt": "cash2go application",
+    "hostedUrl": "https://cash2go.netlify.app",
+    "githubUrl": "https://github.com/group2-team2-fdev2/cash2go"
+  },
+  {
+    "title": "Star Wars Movies Franchise",
+    "article": "On this website, you can access information about all Star Wars movies since their inception. This became possible due to my successful integration of a complex API using the Axios library. The website itself was built using React and Tailwind CSS, allowing for a seamless and user-friendly experience.",
+    "thumbnail": "/starwars-movies-franchise.png",
+    "alt": "star wars movies franchise",
+    "hostedUrl": "https://starwarsmoviesfranchise.netlify.app",
+    "githubUrl": "https://github.com/iambelloopeyemi/starwars-movie-franchise-app"
+  }
+]
