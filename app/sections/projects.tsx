@@ -16,8 +16,11 @@ export default function Projects() {
       </header>
       <ul className="flex flex-col items-center">
         {projects.map(
-          ({ id, title, article, thumbnail, alt, hostedUrl, githubUrl }) => (
-            <li key={id}>
+          (
+            { title, article, thumbnail, alt, hostedUrl, githubUrl },
+            index: number
+          ) => (
+            <li key={index}>
               <Project
                 title={title}
                 article={article}
@@ -32,6 +35,9 @@ export default function Projects() {
           )
         )}
       </ul>
+      <div className="flex justify-center text-center text-lg sm:text-xl font-semibold uppercase">
+        Stay tuned for upcoming projects that will be added to this section
+      </div>
     </section>
   );
 }
